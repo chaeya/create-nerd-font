@@ -1,39 +1,18 @@
-![sample](images/logo.png)
-
-# Monaco Nerd Font
-
-This font is modified from `Monaco.ttf` extracted from **macOS Ventura**, with **bold**, _italic_, and **_bold italic_** added.
+# Create Nerd Font
 
 ## Usage
 
-You can directly download the pre-built font zip from the [Latest Release](https://github.com/thep0y/monaco-nerd-font/releases/latest), or clone this repo locally and build automatically with `docker` or `podman`.
+빌드를 위해  먼저 도커나 podman 이 설치되어 있어야 합니다.
 
 ## Build
 
-You can build the font by executing the script with the latest `nerfonts/patcher` image:
+1. `./input` 폴더안에 nerd 폰트로 변환하고 싶은 폰트들을 복사합니다.
+
+2. 다음과 같이 실행하면 `nerfonts/patcher` 도커 이미지를 이용해서 빌드하게 됩니다.
 
 ```shell
-sh build.sh
+sudo ./create_nerdfont.sh
 ```
-
-Please make sure you have `docker` or `podman` installed before executing the script.
-
-> Some terminals may not support ligatures, ligature fonts are not recommended for vim/nvim users.
-
-## Screenshots
-
-neovim:
-
-![sample](images/nvim.png)
-
-vscode:
-
-![sample](images/vscdoe.png)
-
-ligatures:
-
-![ligatures](images/ligatures.png)
-
 ## Related Projects
 
 - [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
